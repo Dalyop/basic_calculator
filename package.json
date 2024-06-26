@@ -1,0 +1,17 @@
+{
+  "name": "basic_calculator",
+  "description": "git clone https://github.com/Dalyop/basic_calculator.git",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html"
+  },
+  "author": "Dalyop",
+  "license": "ISC",
+
+  "dependencies": {
+    "parcel": "^2.12.0"
+  }
+}
