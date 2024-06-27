@@ -1,3 +1,4 @@
 # This will ignore the node modules
 node_modules
 dist/
+.parcel-cache

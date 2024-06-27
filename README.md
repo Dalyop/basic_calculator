@@ -10,6 +10,8 @@
 
 git clone https://github.com/Dalyop/basic_calculator.git
 
+# Installed three.js for 3d modeling
+
 # git ignore file for log and npm-debug-log
 *.log
 npm-debug-log*

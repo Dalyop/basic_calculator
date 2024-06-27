@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Ovo&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #000;
+
+  --dark: #171615;
+  --gray: #4d5156;
+  --lite: #e3e3e3;
+
+  --primary: #7963f9;
+  --primary_lite: #74dfef;
+  --primary_dark: #020b1f;
+
+  --title_font: "Montserrat", sans-serif;
+  --default_font: "Mukta", sans-serif;
+  --styled_font: "Ovo", serif;
+
+  --linear-grad: linear-gradient(to right, #c03535, #ff4b4b);
+  --grad-clr1: #757272;
+  --grad-clr2: #2b0707;
+}
+body {
+  margin: 0;
+  overflow-x: hidden !important;
+  font-family: var(--default_font);
+  box-sizing: border-box;
+  background: var(--primary_dark);
+  color: var(--lite);
+}
+
+nav {
+  background-color: var(--primary_dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 900;
+  color: var(--primary_lite);
+  text-decoration: none;
+}
+.logo img {
+  max-width: 80px;
+}
+nav .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  gap: 2.5rem;
+  list-style-type: none;
+}
+
+nav .links li a {
+  text-decoration: none;
+  opacity: 0.6;
+  color: var(--white);
+  position: relative;
+  font-weight: 300;
+  font-family: var(--title_font);
+}
+
+nav .links li .active,
+nav .links li a:hover {
+  opacity: 1;
+}
+
+nav .links li .active:before,
+nav .links li a:before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  transition: 0.5s;
+  width: 0px;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+nav .links li .active:before,
+nav .links li a:hover:before {
+  width: 100%;
+}
+
+@media (max-width: 920px) {
+  nav {
+    padding: 1rem;
+  }
+  nav .links {
+    display: none;
+  }
+}
+
+.container {
+  display: grid;
+  place-content: center;
+}
+
+.t-cal {
+
+}
+table {
+  margin: 20px auto;
+  border-spacing: 15px;
+  width: 250px;
+  height: 500px;
+  border: 1px solid rgba(194, 181, 181, 0.808);
+  background-color: var(--dark);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px var(--black);
+}
+th,
+td {
+  border: 1px solid var(--dark);
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary);
+  padding: 0;
+  box-shadow: 0 0 2px 2px var(--grad-clr2);
+}
+td:hover {
+  background-color: var(--black);
+  cursor: pointer;
+}
+td:active {
+  background-color: var(--dark);
+}
+.cal-display {
+  background-color: var(--lite);
+}
+#advance {
+  display: none;
+}
+.cal-advanced {
+  display: none;
+  position: relative;
+  animation-name: show;
+}
+@media (max-width: 698px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  a {
+    color: black;
+    font-size: 0.6rem;
+    margin: 2px;
+  }
+  .reg-button {
+    color: black;
+    font-size: 0.6rem;
+    margin: 2px;
+  }
+  nav {
+    padding: 5px;
+  }
+  .nav-links {
+    color: white;
+    padding: 2px;
+    margin: 2px;
+  }
+  nav > a {
+    display: none;
+  }
+  .container {
+    flex-flow: column;
+    align-items: center;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .flexbox-cal {
+    margin: 0;
+    width: 100%;
+  }
+}
+.flexbox-cal {
+  margin-left: auto;
+  width: 800px;
+  margin: 0 auto;
+}
+.flex-cal {
+  margin: 20px auto;
+  padding: 5px;
+  width: 250px;
+  border: 1px solid var(--primary_dark);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px var(--black);
+}
+.flex-container {
+  width: 250px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.flex-container > div {
+  text-align: center;
+  font-weight: bold;
+  width: 30px;
+  margin: 5px;
+  padding: 15px;
+  color: var(--primary);
+  border: 2px solid var(--black);
+  border-radius: 15px;
+  cursor: pointer;
+}
+.flex-container > div:hover {
+  background-color: var(--black);
+}
+.flex-container > div:active {
+  background-color: var(--dark);
+}
+.cal-advanced {
+  background-color: rgba(0, 0, 0, 0.815);
+}
+#cal-display-flex {
+  text-align: left;
+  width: 250px;
+}
+#cal-display-flex:hover {
+  background-color: var(--black);
+}
+#cal-del-flex {
+  background-color: rgb(156, 10, 0);
+  border: none;
+  color: var(--lite);
+}

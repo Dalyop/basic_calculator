@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Ovo&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+:root {
+  --white: #fff;
+  --black: #000;
+
+  --dark: #171615;
+  --gray: #4d5156;
+  --lite: #e3e3e3;
+
+  --primary: #7963f9;
+  --primary_lite: #74dfef;
+  --primary_dark: #020b1f;
+
+  --title_font: "Montserrat", sans-serif;
+  --default_font: "Mukta", sans-serif;
+  --styled_font: "Ovo", serif;
+
+  --linear-grad: linear-gradient(to right, #c03535, #ff4b4b);
+  --grad-clr1: #c03535;
+  --grad-clr2: #ff4b4b;
+}
+body {
+  height: 100vh;
+  background: var(--primary_dark);
+  margin: 0;
+  overflow-x: hidden !important;
+  font-family: var(--default_font);
+}
+
+main {
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+}
+nav {
+  background-color: var(--primary_dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 900;
+  color: var(--primary_lite);
+}
+
+.logo img {
+  max-width: 80px;
+}
+
+nav .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  gap: 2.5rem;
+}
+
+nav .links li a {
+  opacity: 0.6;
+  color: var(--white);
+  position: relative;
+  font-weight: 300;
+  font-family: var(--title_font);
+}
+
+nav .links li .active,
+nav .links li a:hover {
+  opacity: 1;
+}
+
+nav .links li .active:before,
+nav .links li a:before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  transition: 0.5s;
+  width: 0px;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+nav .links li .active:before,
+nav .links li a:hover:before {
+  width: 100%;
+}
+
+@media (max-width: 920px) {
+  nav {
+    padding: 1rem;
+  }
+  nav .links {
+    display: none;
+  }
+}
+.container {
+  margin: 1rem;
+  position: relative;
+  width: 850px;
+  height: 500px;
+  background-color: var(--lite);
+  box-shadow: 25px 30px 55px var(--black);
+  border-radius: 13px;
+  overflow: hidden;
+}
+.form-container {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  padding: 0px 40px;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-up-container {
+  opacity: 0;
+  z-index: 1;
+}
+
+.sign-in-container {
+  z-index: 2;
+}
+
+form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 50px;
+}
+
+h1 {
+  color: var(--dark);
+}
+.social-container {
+  margin: 20px 0px;
+}
+
+.social-container a {
+  border: 1px solid var(--dark);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5px;
+  height: 40px;
+  width: 40px;
+}
+
+span {
+  font-size: 12px;
+}
+
+.infield {
+  position: relative;
+  margin: 8px 0px;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: var(--lite);
+  border: none;
+  outline: none;
+}
+
+label {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background: var(--primary_dark);
+  transition: width 0.3s ease;
+}
+
+input:focus ~ label {
+  width: 100%;
+}
+
+a {
+  color: var(--dark);
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0px;
+}
+
+a.forgot {
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--primary_lite);
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid var(--lite);
+  background: var(--primary_dark);
+  color: var(--lite);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form-container button {
+  margin-top: 17px;
+  transition: 80ms ease-in;
+}
+
+.form-container button:hover {
+  background: var(--primary);
+  color: var(--lite);
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 60%;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 9;
+}
+
+#overlayBtn {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 297px;
+  transform: translateX(-50%);
+  width: 143.67px;
+  height: 40px;
+  border: 1px solid var(--lite);
+  background: transparent;
+  border-radius: 20px;
+}
+
+.overlay {
+  position: relative;
+  background: var(--primary_dark);
+  color: var(--lite);
+  left: -150%;
+  height: 100%;
+  width: 250%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 40px;
+  text-align: center;
+  height: 100%;
+  width: 340px;
+  transition: 0.6s ease-in-out;
+}
+
+.overlay-left {
+  right: 60%;
+  transform: translateX(-12%);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0%);
+}
+
+.overlay-panel h1 {
+  color: var(--lite);
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 25px 0px 35px;
+}
+
+.overlay-panel button {
+  border: none;
+  background-color: transparent;
+}
+
+.right-panel-active .overlay-container {
+  transform: translateX(-150%);
+}
+
+.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.right-panel-active .overlay-left {
+  transform: translateX(25%);
+}
+
+.right-panel-active .overlay-right {
+  transform: translateX(35%);
+}
+
+.right-panel-active .sign-in-container {
+  transform: translateX(20%);
+  opacity: 0;
+}
+
+.right-panel-active .sign-up-container {
+  transform: translateX(66.7%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+
+@keyframes show {
+  0%,
+  50% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50.1%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+btnScaled {
+  animation: scaleBtn 0.6s;
+}
+
+@keyframes scaleBtn {
+  0% {
+    width: 143.67px;
+  }
+  50% {
+    width: 250px;
+  }
+  100% {
+    width: 143.67px;
+  }
+}
+
+.square {
+  position: absolute;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(181%, 11%);
+  opacity: 0.2;
+}
+
+.big-circle {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, var(--primary), var(--primary));
+  bottom: 50%;
+  right: 50%;
+  transform: translate(-40%, 38%);
+  z-index: -1;
+}
+
+.inner-circle {
+  position: absolute;
+  width: 72%;
+  height: 72%;
+  background-color: var(--primary_dark);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
