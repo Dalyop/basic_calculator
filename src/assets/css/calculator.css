@@ -1,0 +1,152 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+a{
+ color: gold;
+ cursor: pointer;
+}
+a:hover{
+    color: white;
+}
+
+body{
+    background-color:darkblue;
+}
+
+.nav{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: darkblue;
+    align-items: center;
+    box-shadow: 0 0 10px 0;
+}
+.links{
+    margin-left: auto;
+    padding: 20px;
+
+}
+
+.link{
+    margin: 20px;
+}
+
+
+/**.container{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    height: 90vh;
+}*/
+
+.table{
+    border-collapse: collapse;
+    width: 300px;
+    border: 3px solid black;
+    background-color:darkslategrey;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+
+}
+
+td , .key{
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 25%;
+    height: 30px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    color:whitesmoke;
+}
+
+button:hover{
+    background-color:darkblue;
+    color: red;
+}
+
+.th{
+    width: 90%;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    padding: 5%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.key{
+    width: 100%;
+}
+
+.calc-screen{
+    padding: 30px;
+    width: 100%;
+    height: 20px;
+    background-color: white;
+    margin:20px;
+    border-radius: 10px;
+    color: black;
+}
+
+.calc-1and2{
+    display: flex;
+    flex-flow: row;
+}
+
+.calculator1{
+    width: 50%;
+    margin: 50px;
+}
+
+/** CALCULATOR 2*/
+
+
+.calculator2{
+    display: flex;
+    flex-flow:row wrap;
+    width: 50%; 
+    margin: 50px;
+
+}
+
+/**.calculator2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50%;
+    float: left;
+} */
+
+.calc-screen2{
+    width:74%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: aliceblue;
+    justify-content: center;
+    
+}
+
+.buttons{
+    display: flex;
+    flex-flow: row wrap;
+   
+}
+
+button {
+    width:20%;
+    padding: 2px;
+    margin: 3px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    border: 1px solid red;
+
+}

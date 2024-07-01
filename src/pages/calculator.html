@@ -2,10 +2,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1.0">
-    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="../assets/css/calculator.css">
 </head>
+
 <body>
+
+    <nav class="nav">
+        
+        <div class="top-img">
+            <a href="#"><img src="../assets/icons/IMG_1439.PNG" width="20%"></a>
+        </div>
     
+        <div class="links">
+        <a href="C:\Users\USER\Desktop\New Project\basic_calculator\src\index.html" class="link">HOME</a>
+        <a href="#" class="link">FUN & GAMES</a>
+        <a href="#" class="link">QUIZZES</a>
+        </div>
+
+    </nav>
+
+
+    <div class="calc-1and2">
+
+        <!--CALCULATOR 1 USING TABLE-->
+    
+        <div class="calculator1">
+    
+            <table class="table">
+    
+                <tr>
+                    <td colspan="5" class="calc-screen"></td>
+                </tr>
+                <tr>
+                    <td><button class="key">8</button></td>
+                    <td><button class="key">9</button></td>
+                    <td><button class="key">CE</button></td>
+                    
+                </tr>
+        
+                <tr>
+                    <td><button class="key">4</button></td>
+                    <td><button class="key">7</button></td>
+                    <td><button class="key">5</button></td>
+                    <td><button class="key">6</button></td>
+                    <td><button class="key">/</button></td>
+                </tr>
+        
+                <tr>
+                    <td><button class="key">3</button></td>
+                    <td><button class="key">2</button></td>
+                    <td><button class="key">1</button></td>
+                    <td><button class="key">*</button></td>
+                </tr>
+        
+                <tr>
+                    <td colspan="2"><button class="key">0</button></td>
+                    <td><button class="key">.</button></td>
+                    <td><button class="key">+</button></td>
+                </tr>
+        
+                <tr>
+                    <td><button class="key">inv</button></td>
+                    <td><button class="key">rad</button></td>
+                    <td><button class="key">%</button></td>
+                    <td><button class="key">^</button></td>
+                </tr>
+        
+                <tr> 
+                    <td><button class="key">cos</button></td>
+                    <td><button class="key">sin</button></td>
+                    <td><button class="key">tan</button></td>
+                    <td><button class="key">log</button></td>
+                </tr>
+        
+                <tr>
+                    <td colspan="3"><button class="key">=</button></td>
+                    <td><button class="key">-</button></td>
+                </tr>
+    
+            </table>  
+        </div>
+    
+         <!--CLACULATOR 2 USING FLEXBOX-->
+    
+    
+            <div class="calculator2">
+    
+                <div class="calc-screen2"></div>
+          
+                <div class="buttons">
+                    <button class="operator">CE</button>
+                    <button class="operator">%</button>
+                    <button class="operator">^</button>
+                    <button class="operator">!</button>
+                    <button class="operator">7</button>
+                    <button class="operator">8</button>
+                    <button class="operator">9</button>
+                    <button class="operator">/</button>
+                    <button class="operator">4</button>
+                    <button class="operator">5</button>
+                    <button class="operator">6</button>
+                    <button class="operator">*</button>
+                    <button class="operator">1</button>
+                    <button class="operator">2</button>
+                    <button class="operator">3</button>
+                    <button class="operator">-</button>
+                    <button class="operator">( )</button>
+                    <button class="operator">+</button> 
+                    <button class="operator">cos</button>
+                    <button class="operator">tan</button>
+                    <button class="operator">log</button>
+                    <button class="operator">sin</button>
+                    <button class="operator">0</button>
+                    <button class="operator">=</button> 
+    
+                </div>  
+    
+            </div>
+    
+
+    </div>
+
+   
+ <script src="../js/calulator.js"></script>
+ <script src="../js/calculator2.js"></script>
+
+    
+
 </body>
 </html>
